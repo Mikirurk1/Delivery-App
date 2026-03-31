@@ -142,7 +142,11 @@ export default function ShopsPage() {
     if (categoryIds.length > 0) params.set("categories", categoryIds.join(","));
     params.set("page", String(page));
     const query = params.toString();
-    replaceWithoutScroll(query ? `${pathname}?${query}` : pathname);
+    const targetHref = query ? `${pathname}?${query}` : pathname;
+    const currentQuery = window.location.search.replace(/^\?/, "");
+    const currentHref = currentQuery ? `${pathname}?${currentQuery}` : pathname;
+    if (targetHref === currentHref) return;
+    replaceWithoutScroll(targetHref);
   }, [
     categoryIds,
     page,
