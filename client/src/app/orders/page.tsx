@@ -149,6 +149,7 @@ export default function OrdersPage() {
           )}
           <Button
             className={styles.searchBtn}
+            startIcon={<Search size={16} />}
             onClick={() => {
               setSearched(true);
               loadOrders({
@@ -160,7 +161,6 @@ export default function OrdersPage() {
               });
             }}
           >
-            <Search size={16} />
             Search Orders
           </Button>
         </div>

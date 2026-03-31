@@ -33,6 +33,11 @@
   justify-self: start;
 }
 
+.backToShopsBtn > span {
+  display: inline-flex;
+  align-items: center;
+}
+
 .backToShopsBtn:hover {
   background: #f3f4f6;
   color: #111827;
