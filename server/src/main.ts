@@ -8,8 +8,17 @@ async function bootstrap() {
     process.env.CLIENT_URL ?? 'http://localhost:3000,http://localhost:3001'
   )
     .split(',')
-    .map((origin) => origin.trim())
+    .map((origin) => origin.trim().replace(/\/$/, ''))
     .filter(Boolean);
+
+  const isVercelDomain = (origin: string) => {
+    try {
+      const { hostname } = new URL(origin);
+      return hostname === 'vercel.app' || hostname.endsWith('.vercel.app');
+    } catch {
+      return false;
+    }
+  };
 
   app.enableCors({
     origin: (
@@ -17,11 +26,16 @@ async function bootstrap() {
       callback: (err: Error | null, allow?: boolean) => void,
     ) => {
       // Allow same-origin and non-browser requests, and validate browser origins.
-      if (!origin || allowedOrigins.includes(origin)) {
+      const normalizedOrigin = origin?.replace(/\/$/, '');
+      if (
+        !normalizedOrigin ||
+        allowedOrigins.includes(normalizedOrigin) ||
+        isVercelDomain(normalizedOrigin)
+      ) {
         callback(null, true);
         return;
       }
-      callback(new Error(`CORS blocked for origin: ${origin}`), false);
+      callback(new Error(`CORS blocked for origin: ${normalizedOrigin}`), false);
     },
     credentials: true,
   });
