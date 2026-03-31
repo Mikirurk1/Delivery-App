@@ -12,6 +12,8 @@
     "@apollo/client": "^4.1.6",
     "@hookform/resolvers": "^5.2.2",
     "@reduxjs/toolkit": "^2.11.2",
+    "@vercel/analytics": "^2.0.1",
+    "@vercel/speed-insights": "^2.0.0",
     "clsx": "^2.1.1",
     "graphql": "^16.13.2",
     "graphql-tag": "^2.12.6",
