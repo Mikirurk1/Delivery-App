@@ -1,0 +1,152 @@
+.pageHead {
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-size: 1.875rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.subtitle {
+  color: var(--muted);
+}
+
+.backToShopsBtn {
+  border: 0;
+  border-radius: 0.75rem;
+  padding: 0.375rem 0.75rem;
+  min-height: 2rem;
+  background: transparent;
+  color: #6b7280;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-self: start;
+}
+
+.backToShopsBtn:hover {
+  background: #f3f4f6;
+  color: #111827;
+}
+
+.searchCard {
+  display: grid;
+  gap: 1rem;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 2rem;
+}
+
+.chipSwitch {
+  display: inline-flex;
+  background: #f3f4f6;
+  border-radius: 0.8rem;
+  padding: 0.2rem;
+  gap: 0.25rem;
+}
+
+.chipBtn {
+  border: 0;
+  border-radius: 0.65rem;
+  padding: 0.45rem 0.8rem;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.chipBtnActive {
+  background: var(--primary);
+  color: #fff;
+}
+
+.ordersTabBtn {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.searchBtn {
+  width: 100%;
+  justify-content: center;
+  min-height: 3rem;
+  font-size: 1rem;
+}
+
+.prefillHistory {
+  margin-top: 1.25rem;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.prefillHistoryTitle {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.prefillHistoryGrid {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.prefillCard {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  display: grid;
+  gap: 0.35rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.prefillCardHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+}
+
+.prefillActiveBadge {
+  background: #ecfdf5;
+  color: #047857;
+  border-radius: 999px;
+  padding: 0.15rem 0.45rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.prefillMeta {
+  font-size: 0.85rem;
+  color: #334155;
+}
+
+.prefillMeta span {
+  color: #64748b;
+  font-weight: 600;
+}
+
+.prefillMuted {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+@media (max-width: 900px) {
+  .prefillHistoryGrid {
+    grid-template-columns: 1fr;
+  }
+}

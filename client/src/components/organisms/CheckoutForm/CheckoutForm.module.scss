@@ -1,0 +1,25 @@
+.form {
+  display: grid;
+  gap: 1rem;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.submitBtn {
+  width: 100%;
+  background: var(--primary);
+  color: #fff;
+}
+
+.submitBtn:hover {
+  background: var(--primary-hover);
+}

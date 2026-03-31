@@ -1,0 +1,142 @@
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.delayedReveal {
+  opacity: 0;
+  animation: revealSkeleton 0s linear 180ms forwards;
+}
+
+@keyframes revealSkeleton {
+  to {
+    opacity: 1;
+  }
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.historyTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.card {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  display: grid;
+  gap: 1rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.cardHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.date {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 0.25rem;
+}
+
+.statusBadge {
+  background: #ecfdf5;
+  color: #047857;
+  border-radius: 999px;
+  padding: 0.2rem 0.55rem;
+  font-size: 0.75rem;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+.metaGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.6rem 1rem;
+  padding: 0.85rem;
+  border: 1px solid var(--border);
+  border-radius: 0.65rem;
+  background: #f8fafc;
+}
+
+.metaRow {
+  min-width: 0;
+}
+
+.metaRowWide {
+  grid-column: 1 / -1;
+  min-width: 0;
+}
+
+.metaLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #475569;
+}
+
+.metaValue {
+  margin-top: 0.2rem;
+  font-size: 0.9rem;
+  color: #0f172a;
+  overflow-wrap: anywhere;
+}
+
+.items {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.itemLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.cardFoot {
+  border-top: 1px solid var(--border);
+  padding-top: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.total {
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.reorderBtn {
+  background: #14b8a6;
+  color: #fff;
+}
+
+.reorderBtn:hover {
+  background: #0f9f90;
+}
+
+@media (max-width: 640px) {
+  .metaGrid {
+    grid-template-columns: 1fr;
+  }
+}

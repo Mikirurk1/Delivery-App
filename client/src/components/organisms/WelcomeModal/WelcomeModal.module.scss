@@ -1,0 +1,141 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  background: rgb(0 0 0 / 45%);
+}
+
+.card {
+  width: 100%;
+  max-width: 512px;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow:
+    0 20px 25px -5px rgb(0 0 0 / 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.1);
+  padding: 2rem;
+  display: grid;
+  gap: 1rem;
+  position: relative;
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.card p {
+  color: var(--muted);
+}
+
+.head {
+  display: grid;
+  gap: 0.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.logo {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: linear-gradient(135deg, #2563eb, #14b8a6);
+}
+
+.points {
+  display: grid;
+  gap: 1rem;
+}
+
+.point {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  align-items: start;
+  gap: 0.75rem;
+}
+
+.point h4 {
+  font-size: 0.95rem;
+  margin-bottom: 0.2rem;
+  font-weight: 600;
+}
+
+.point p {
+  font-size: 0.875rem;
+}
+
+.pointIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 0.6rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.primary {
+  background: #eff6ff;
+}
+
+.primary svg {
+  color: #2563eb;
+}
+
+.teal {
+  background: #ccfbf1;
+}
+
+.teal svg {
+  color: #14b8a6;
+}
+
+.green {
+  background: #dcfce7;
+}
+
+.green svg {
+  color: #16a34a;
+}
+
+.amber {
+  background: #fef3c7;
+}
+
+.amber svg {
+  color: #f59e0b;
+}
+
+.close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  color: var(--muted);
+  border-radius: 0.5rem;
+  padding: 0.35rem;
+}
+
+.close:hover {
+  background: #f3f4f6;
+}
+
+.button {
+  border: 0;
+  border-radius: 0.75rem;
+  padding: 0.5rem 1rem;
+  min-height: 2.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary);
+  color: #fff;
+  cursor: pointer;
+}

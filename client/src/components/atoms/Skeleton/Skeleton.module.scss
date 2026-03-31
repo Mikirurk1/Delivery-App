@@ -1,0 +1,81 @@
+.card {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  display: grid;
+  gap: 1rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.orderCardHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.grid {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.orderItems {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.orderCardFoot {
+  border-top: 1px solid var(--border);
+  padding-top: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.skeleton {
+  background: linear-gradient(90deg, #e5e7eb 25%, #f3f4f6 37%, #e5e7eb 63%);
+  background-size: 400% 100%;
+  animation: shimmer 1.25s ease-in-out infinite;
+  border-radius: 0.75rem;
+}
+
+.text {
+  height: 0.95rem;
+}
+
+.textSm {
+  height: 0.8rem;
+  width: 42%;
+}
+
+.textLg {
+  height: 1.1rem;
+  width: 68%;
+}
+
+.price {
+  width: 84px;
+  height: 1.25rem;
+}
+
+.button {
+  width: 96px;
+  height: 2.35rem;
+}
+
+.chip {
+  width: 82px;
+  height: 1.45rem;
+  border-radius: 999px;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}

@@ -1,0 +1,134 @@
+.topbar {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  box-shadow: var(--shadow-sm);
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 100%;
+  padding-inline: clamp(1rem, 2.5vw, 2rem);
+}
+
+.topbarInner {
+  height: 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.brandLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.brandIcon {
+  width: 32px;
+  height: 32px;
+  border-radius: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: linear-gradient(135deg, #2563eb, #14b8a6);
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.navLink {
+  border-radius: 0.75rem;
+  padding: 0.5rem 1rem;
+  color: var(--muted);
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.navLink:hover {
+  background: #f3f4f6;
+  color: #111827;
+}
+
+.navLinkActive {
+  background: #eff6ff;
+  color: var(--primary);
+}
+
+.navBadge {
+  min-width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  padding: 0 0.3rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary);
+  color: #fff;
+  font-size: 0.7rem;
+  line-height: 1;
+}
+
+.mobileNav {
+  display: none;
+}
+
+.mobileNavIconWrap {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobileBadge {
+  min-width: 16px;
+  height: 16px;
+  padding: 0 0.2rem;
+  font-size: 0.625rem;
+  position: absolute;
+  top: -4px;
+  right: -7px;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+
+  .mobileNav {
+    display: flex;
+    justify-content: space-around;
+    gap: 0.5rem;
+    background: #fff;
+    border-top: 1px solid var(--border);
+    padding: 0.5rem 1rem;
+  }
+
+  .mobileNav .navLink {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.75rem;
+  }
+
+  .mobileNav .navLinkActive {
+    background: transparent;
+    color: var(--primary);
+  }
+}
