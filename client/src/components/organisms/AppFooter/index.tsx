@@ -17,7 +17,9 @@ export default function AppFooter() {
             <Image src="/mt.svg" alt="MT logo" width={52} height={18} />
           </div>
           <div className={styles.footerLinks}>
-            <a href="#">Github</a>
+            <a target="_blank" href="https://github.com/Mikirurk1">
+              Github
+            </a>
           </div>
         </div>
         <div className={styles.footerCopy}>
